@@ -14,6 +14,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tinda.R
@@ -37,11 +38,17 @@ fun HeaderSection() {
         }
 
         Image(
-            painter = painterResource(id = R.drawable.ic_launcher_foreground),
+            painter = painterResource(id = R.drawable.mask_group),
             contentDescription = null,
             modifier = Modifier
                 .size(50.dp)
                 .clip(CircleShape)
         )
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewHeaderSection() {
+    HeaderSection()
 }
