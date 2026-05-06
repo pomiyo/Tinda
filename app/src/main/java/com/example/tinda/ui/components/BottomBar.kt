@@ -32,6 +32,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import com.example.tinda.model.BottomTab
+import com.example.tinda.ui.theme.AppRed
 
 
 @Composable
@@ -62,7 +63,7 @@ fun CustomBottomBar(
                         cornerRadius = with(LocalDensity.current) { 24.dp.toPx() }
                     )
                 )
-                .background(Color.Red)
+                .background(AppRed)
         ) {
 
             Row(
@@ -134,7 +135,7 @@ fun CustomBottomBar(
                     scaleX = scale
                     scaleY = scale
                 }
-                .background(Color.Red, CircleShape)
+                .background(AppRed, CircleShape)
                 .clickable(
                     interactionSource = interactionSource,
                     indication = null

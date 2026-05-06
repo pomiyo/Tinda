@@ -19,7 +19,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.tinda.R
+import com.example.tinda.ui.theme.AppRed
+import com.example.tinda.ui.theme.RobotoFontFamily
 
 @Composable
 fun SearchBar(
@@ -37,10 +43,18 @@ fun SearchBar(
                 .weight(1f)
                 .background(Color.White, RoundedCornerShape(20.dp)),
             placeholder = {
-                Text("Search")
+                Text(
+                    "Search",
+                    fontSize = 18.sp,
+                    fontFamily = RobotoFontFamily
+                )
             },
             leadingIcon = {
-                Icon(Icons.Default.Search, contentDescription = null)
+                Icon(
+                    modifier = Modifier.size(24.dp),
+                    painter = painterResource(id = R.drawable.search_icon),
+                    contentDescription = "search icon"
+                )
             },
             singleLine = true,
             shape = RoundedCornerShape(20.dp),
@@ -57,14 +71,22 @@ fun SearchBar(
         Box(
             modifier = Modifier
                 .size(50.dp)
-                .background(Color.Red, RoundedCornerShape(16.dp)),
+                .background(AppRed, RoundedCornerShape(16.dp)),
             contentAlignment = Alignment.Center
         ) {
             Icon(
-                Icons.Default.Menu,
-                contentDescription = null,
+                painter = painterResource(R.drawable.search_filter),
+                contentDescription = "search filter",
                 tint = Color.White
             )
         }
+    }
+}
+
+@Preview
+@Composable
+fun SearchBarPreview() {
+    SearchBar("search") {
+
     }
 }

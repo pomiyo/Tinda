@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.tinda.ui.theme.AppRed
 
 @Composable
 fun CategoryRow() {
@@ -30,7 +31,7 @@ fun CategoryRow() {
             Box(
                 modifier = Modifier
                     .background(
-                        if (isSelected) Color.Red else Color.LightGray,
+                        if (isSelected) AppRed else Color.LightGray,
                         RoundedCornerShape(20.dp)
                     )
                     .padding(horizontal = 16.dp, vertical = 8.dp)

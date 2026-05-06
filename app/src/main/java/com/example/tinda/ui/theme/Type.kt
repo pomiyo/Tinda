@@ -2,9 +2,11 @@ package com.example.tinda.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.tinda.R
 
 // Set of Material typography styles to start with
 val Typography = Typography(
@@ -31,4 +33,14 @@ val Typography = Typography(
         letterSpacing = 0.5.sp
     )
     */
+)
+
+val LobsterFontFamily = FontFamily(
+    Font(R.font.lobster_regular, FontWeight.Normal)
+)
+val PoppinsFontFamily = FontFamily(
+    Font(R.font.poppins_medium, FontWeight.Medium)
+)
+val RobotoFontFamily = FontFamily(
+    Font(R.font.roboto_medium, FontWeight.Medium)
 )
